@@ -25,6 +25,7 @@ namespace Lab_02_6program
                     {
                         Console.WriteLine($"{N} года");
                     }
+                    Console.ReadKey();
                 }
                 else
                 {
