@@ -9,21 +9,24 @@ namespace Lab_02_6program
             try
             {
                 Console.Clear();
-                Console.Write("Write number from 1 to 100: ");
-                byte N = Byte.Parse(Console.ReadLine());
+                Console.Write("Write number from 1 to 100(10000): ");
+                short N = Int16.Parse(Console.ReadLine());
                 if (N != 0)
                 {
-                    if (N % 10 == 0 || N > 4 && N < 20 || N % 10 == 5 || N % 10 == 6 || N % 10 == 7 || N % 10 == 8 || N % 10 == 9)
+                    for (int i = 1; i <= N; i++)
                     {
-                        Console.WriteLine($"{N} лет");
-                    }
-                    else if (N == 1 || N % 10 == 1)
-                    {
-                        Console.WriteLine($"{N} год");
-                    }
-                    else if (N % 10 != 0 || N % 10 != 1)
-                    {
-                        Console.WriteLine($"{N} года");
+                        if (i % 10 == 0 || i % 10 > 4 && i % 10 <= 9 || i % 100 > 10 && i % 100 < 20)
+                        {
+                            Console.WriteLine($"{i} лет");
+                        }
+                        else if (i == 1 || i % 10 == 1)
+                        {
+                            Console.WriteLine($"{i} год");
+                        }
+                        else if (i % 10 != 0 || i % 10 != 1)
+                        {
+                            Console.WriteLine($"{i} года");
+                        }
                     }
                     Console.ReadKey();
                 }
